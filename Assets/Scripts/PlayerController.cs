@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    private Rigidbody playerRB;
+
     void Start()
     {
-        
+        playerRB = GetComponent<Rigidbody>();
+        playerRB.AddForce(Vector3.up * 1000);
     }
 
     // Update is called once per frame
