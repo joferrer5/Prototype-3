@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     private Animator playerAnim;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
 
     void Start()
     {
