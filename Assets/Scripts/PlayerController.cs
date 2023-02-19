@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     
     }
     public bool gameOver = false;
+    public ParticleSystem explosionParticle;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
             gameOver = true;
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
+            explosionParticle.Play();
         }
     }
 }
